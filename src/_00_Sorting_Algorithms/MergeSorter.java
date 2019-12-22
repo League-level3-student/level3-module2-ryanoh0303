@@ -13,13 +13,42 @@ public class MergeSorter extends Sorter {
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
 		//20. call the mergeSort method with 0 and the length of the array minus one
+		mergeSort(array,0, array.length-1, display);
 	}
 	
 	private void mergeSort(int[] array, int low, int high, SortingVisualizer display) {
 		//1. Create a temporary integer array that is the same length as the passed in array.
-		
+		int[] temporary= new int[array.length];
 		//2. make an if statement that checks if low is less than high
 		//   and put the rest of the method inside of it
+		if(low < high) {
+			  int middle= ((high+low)/2);
+			  mergeSort(array, low, middle, display);
+			  mergeSort(array, middle+1, high, display);
+			  for(int x=low; x<=high; x++) {
+				  temporary[x]=array[x];
+				  
+			  }
+			  int i= low;
+			  int j=middle;
+			  int k=high;
+			  while(i<=middle&& j<=high) {
+				  if(temporary[i]<=temporary[j]) {
+					  array[k]=temporary[i];
+					  i+=1;
+				  }
+				  else {
+					  array[k]=temporary[j];
+					  j+=1;
+				  }
+				  k+=1;
+			  }
+			  while(i<=middle) {
+				  array[k]=temporary[i];
+				  k+=1;
+				  i+=1;
+			  }
+		}
 
 			//3. Create an integer called middle and set it 
 			//   equal to the half way point between low and high
