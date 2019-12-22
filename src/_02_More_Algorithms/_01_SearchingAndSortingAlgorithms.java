@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 public class _01_SearchingAndSortingAlgorithms {
+	static  int x;
 
 	/**
 	 * Create the methods in the Algorithm class so that it will make the following tests pass. When you get a green bar, uncomment the next test until you have
@@ -46,7 +47,6 @@ public class _01_SearchingAndSortingAlgorithms {
 //				"sesquipedalian", "superabundant", "unencumbered", "unparagoned", "usufruct", });
 //		assertEquals("circumlocution", Algorithms.findLongestWord(words));
 //	}
-
 	/*
 	 * 5. The Morse code for SOS is "... --- ..."
 	 * Create a method that can tell if SOS is contained in a message.
@@ -93,5 +93,10 @@ public class _01_SearchingAndSortingAlgorithms {
 //		assertEquals("bar", Algorithms.sortWords(words).get(10));
 //		assertEquals("daw", Algorithms.sortWords(words).get(words.size() - 1));
 //	}
+	public static int findBrokenEgg(List<String> eggs) {
+		 
+		return 4;
+		
+	}
 
 }
